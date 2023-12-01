@@ -8,7 +8,7 @@ public class Task2(IContentParser contentParser) : IDailyTask<long>
 
     public long Run()
     {
-        var twoDigitsCleaner = new StringsToDigitsCleaner(_contentParser.GetLines("Task2.txt"));
+        var twoDigitsCleaner = new StringsToDigitsCleaner(_contentParser.GetLines("Task.txt"));
         var list = new TwoDigitsCleaner(twoDigitsCleaner.CleanDocument()).CleanDocument();
         return list.Sum(int.Parse);
     }

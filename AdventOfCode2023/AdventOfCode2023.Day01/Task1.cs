@@ -8,8 +8,10 @@ public class Task1(IContentParser contentParser) : IDailyTask<long>
 
     public long Run()
     {
-        throw new NotImplementedException();
+        var twoDigitsCleaner = new TwoDigitsCleaner(_contentParser.GetLines("Task2.txt"));
+        var list = twoDigitsCleaner.CleanDocument();
+        return list.Sum(int.Parse);
     }
 
-    public string Name => "";
+    public string Name => "Trebuchet?!";
 }

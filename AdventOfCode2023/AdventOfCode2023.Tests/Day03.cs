@@ -37,10 +37,19 @@ public class Day03
     {
         public List<string> GetLines(string manifestName)
         {
-            return new List<string>()
-            {
-
-            };
+            return
+            [
+                "467..114..",
+                "...*......",
+                "..35..633.",
+                "......#...",
+                "617*......",
+                ".....+.58.",
+                "..592.....",
+                "......755.",
+                "...$.*....",
+                ".664.598.."
+            ];
         }
     }
 }

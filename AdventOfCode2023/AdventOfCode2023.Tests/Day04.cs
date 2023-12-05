@@ -1,4 +1,6 @@
 using AdventOfCode.Interfaces;
+using AdventOfCode2023.Common;
+using AdventOfCode2023.Day04;
 
 namespace AdventOfCode2023.Tests;
 
@@ -12,25 +14,41 @@ public class Day04
     [Test]
     public void Task1Predefined()
     {
-        Assert.Fail();
+        IContentParser contentParser = new PredefinedContentParser();
+
+        IDailyTask<long> sut = new Task1(contentParser);
+        long result = sut.Run();
+        Assert.That(result, Is.EqualTo(13));
     }
     
     [Test]
     public void Task1()
     {
-        Assert.Fail();
+        IContentParser contentParser = new ContentParser();
+
+        IDailyTask<long> sut = new Task1(contentParser);
+        long result = sut.Run();
+        Assert.That(result, Is.EqualTo(27059));
     }
     
     [Test]
     public void Task2Predefined()
     {
-        Assert.Fail();
+        IContentParser contentParser = new PredefinedContentParser();
+
+        IDailyTask<long> sut = new Task2(contentParser);
+        long result = sut.Run();
+        Assert.That(result, Is.EqualTo(30));
     }
     
     [Test]
     public void Task2()
     {
-        Assert.Fail();
+        IContentParser contentParser = new ContentParser();
+
+        IDailyTask<long> sut = new Task2(contentParser);
+        long result = sut.Run();
+        Assert.That(result, Is.EqualTo(5744979));
     }
 
     internal class PredefinedContentParser : IContentParser

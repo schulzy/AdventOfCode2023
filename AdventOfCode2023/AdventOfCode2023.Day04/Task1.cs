@@ -8,8 +8,9 @@ public class Task1(IContentParser contentParser) : IDailyTask<long>
 
     public long Run()
     {
-        throw new NotImplementedException();
+        var scratcher = new Scratcher(_contentParser.GetLines("Task.txt"));
+        return scratcher.SumOfPoints();
     }
 
-    public string Name => "";
+    public string Name => "Scratchcards";
 }
